@@ -1,0 +1,185 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+#study-timer {
+    height: 10vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+}
+
+#study-timer-functions {
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.study-timer-function-spacer {
+    width: 35%;
+}
+
+.function-button {
+    width: 10%;
+    background: dodgerblue;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    line-height: 6vh;
+    margin: 0.5vh;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.function-button:hover {
+    background: midnightblue;
+}
+
+#content-wrapper {
+    height: 75vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    box-shadow: -3px 3px 10px 2px rgb(0,0,0,0.3);
+}
+
+#files-list-section {
+    height: 100%;
+    width: 20vw;
+    order: 1;
+    background: #111;
+}
+
+#files-list-header {
+    height: 10%;
+    width: 100%;
+    color: white;
+    display: flex;
+    line-height: 7.5vh;
+}
+
+#add-new-file-button {
+    height: 6vh;
+    width: 100px;
+    margin: 0.75vh;
+    line-height: 6vh;
+    text-align: center;
+    background: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add-new-file-button:hover {
+    background: midnightblue;
+}
+
+#files-list {
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.indiv-file {
+    background: #222;
+    height: 10%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border-bottom: 0.5px solid #CCC;
+}
+
+.indiv-file:hover {
+    background: dodgerblue;
+}
+
+.indiv-file-name {
+    width: 80%;
+    height: 100%;
+    line-height: 6.75vh;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.indiv-file-arrow {
+    width: 20%;
+    height: 100%;
+    line-height: 6.75vh;
+    text-align: center;
+}
+
+#content-section {
+    order: 2;
+    height: 75vh;
+    width: 70vw;
+    background: #444;
+}
+
+#content-header {
+    height: 10%;
+    width: 100%;
+    background: #222;
+}
+
+#writing-section  {
+    height: 80%;
+    width: 100%;
+}
+
+#content-footer {
+    height: 10%;
+    width: 100%;
+}
+
+#save-button {
+    width: 100px;
+    height: 6vh;
+    margin: 0.75vh;
+    float: right;
+    background: dodgerblue;
+    color: white;
+    text-align: center;
+    line-height: 6vh;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#save-button:hover {
+    background: midnightblue;
+}
+
+#content-text {
+    height: 59vh;
+    width: 69vw;
+    margin-top: 0.5vh;
+    margin-left: 0.5vw;
+    background: rgb(0,0,0,0);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+#content-title {
+    height: 100%;
+    width: 100%;
+    text-indent: 0.5vw;
+    font-size: 25px;
+    background: rgb(0,0,0,0);
+    border: none;
+    outline: none;
+    color: white;
+}

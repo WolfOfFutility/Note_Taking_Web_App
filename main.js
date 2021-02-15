@@ -32,12 +32,14 @@ addFileButton.addEventListener("click", () => {
     wipeAll();
 })
 
+// Clear all of the content area, saving progress
 function wipeAll() {
     saveFile();
     contentTextField.value = "";
     contentTitleField.value = "";
 }
 
+// Save a file that is currently open
 function saveFile() {
     fetch("http://localhost:3000/saveFile?title=" + contentTitleField.value + "&content=" + contentTextField.value).then(response => response.text()).then(res => {
         console.log(res);
@@ -45,12 +47,14 @@ function saveFile() {
     loadAllFiles();
 }
 
+// Open a file when selected
 function openFile(filename) {
     fetch("http://localhost:3000/readFile?name=" + filename).then(response => response.text()).then(res => {
         contentTextField.value = res;
     })
 }
 
+// Formatting the title of each of the documents
 function formattingTitle(title) {
     var titleArr = title.split(" ");
     var titleStr = "";
@@ -76,6 +80,7 @@ function formattingTitle(title) {
     return titleStr;
 }
 
+// Loads all of the files in the directory that have been used with this app and places them on the page
 function loadAllFiles() {
     var arr = [];
     filesList.innerHTML = "";
@@ -111,11 +116,13 @@ function loadAllFiles() {
     })
 }
 
+// Loads the default time display
 function setDefaultTimeDisplay() {
     var timeDisplay = hours + " hrs : " + mins + " mins : " + seconds + " seconds";
     timerDiv.innerHTML = "<h2>" + timeDisplay + "</h2>";
 }
 
+// Function that handles the timer ticking and displaying
 function changeTime() {
     if(!paused) {
         if(seconds >= 60) {
